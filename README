@@ -2,6 +2,25 @@
 
 This guide provides step-by-step instructions on setting up and running the "express-typescript-auth-app" project locally on your machine. Please follow the steps outlined below.
 
+Below is a summary of key features and instructions for running the project:
+
+## Features:
+### Technology Stack:
+
+1. Express.js and TypeScript for server-side development.
+2. TypeORM for database interactions.
+3. Passport for authentication strategies.
+4. Swagger for API documentation.
+### Development Tools:
+
+1. Nodemon for automatic server restart during development.
+2. ts-node for running TypeScript files directly.
+3. Concurrently for running multiple npm scripts concurrently.
+4. Database Migrations:
+
+TypeORM is used for managing database migrations.
+Commands for creating, generating, applying, and rolling back migrations are provided.
+
 ## Prerequisites
 
 Before getting started, ensure that you have the following installed on your machine:
