@@ -1,0 +1,2 @@
+Run migration
+`typeorm migration:create -n {create_users}`

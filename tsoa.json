@@ -1,0 +1,22 @@
+{
+    "entryFile": "src/index.ts",
+    "noImplicitAdditionalProperties": "throw-on-extras",
+    "controllerPathGlobs": ["src/controllers/*"],
+    "spec": {
+      "outputDirectory": "public",
+      "specVersion": 3,
+      "securityDefinitions": {
+        "jwt":{
+          "type":"jwt",
+          "name":"jwt"
+       }
+      }
+    },
+   
+    "routes": {
+        "routesDir": "src",
+        "authenticationModule": "./src/configs/auth.config.ts"
+      }
+  }
+
+ 
