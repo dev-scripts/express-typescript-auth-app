@@ -13,6 +13,7 @@ import { RegisterRoutes } from './routes';
 import { envVariables } from "./configs";
 import { AuthError } from './error/auth.error'
 import './configs/auth.config';
+import { dataSource } from "./configs";
 
 const PORT = envVariables.PORT || 8000;
 const app: Application = express();
@@ -36,6 +37,16 @@ app.use(
 app.listen(PORT, () => {
   console.log("Server is running on port", PORT);
 });
+
+if (!dataSource.isConnected) {
+   dataSource.initialize()
+    .then(() => {
+  console.log("Data Source has been initialized!");
+})
+.catch((err) => {
+  console.error("Error during Data Source initialization:", err);
+});
+};
 
 // catch general error 
 RegisterRoutes(app);
